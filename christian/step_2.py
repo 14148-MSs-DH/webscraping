@@ -6,12 +6,14 @@ page = urlopen(url)
 html = page.read().decode("utf-8")
 print(html)
 
+# quit()  # Stop execution here for now
+
 # Base for constructing full URLs
 BASE = "https://www.perseus.tufts.edu/hopper/"
 
 # Define a regex pattern
 import re
-pattern = re.compile(r"<td class=\"tdAuthor\".*?>\s*(.*?)\s*"
+pattern = re.compile(r"<td class=\'tdAuthor\'.*?>\s*(.*?)\s*"
                      r"<a href=\"(.*?)\" class=\"aResultsHeader\".*?>\s*(.*?)\s*</a>",
                      re.DOTALL)
 
@@ -20,6 +22,7 @@ results = []
 
 matches = pattern.findall(html)
 # print(matches)
+# quit()
 
 # Loop through results and collect them
 for author, link, title in matches:
@@ -29,7 +32,7 @@ for author, link, title in matches:
     link = BASE + link.strip()
 
     # Store the extracted data in the results list
-    results.append([author, title, link])
+    results.append((author, title, link))
 
 # Print the results
 for author, title, link in results:

@@ -10,7 +10,6 @@ from urllib.request import urlopen
 
 url = "http://olympus.realpython.org/profiles/aphrodite"
 
-
 # Here we open the web page.
 # Python sends an HTTP request to the server.
 # The server responds with the raw contents of the page.
@@ -24,6 +23,7 @@ page = urlopen(url)
 # decode("utf-8") converts those bytes into a normal Python string.
 # Finally, we print the HTML source code of the page to the screen.
 
-print(page.read().decode("utf-8"))
+html = page.read().decode("utf-8")
+print(html)
 # When you run this code, you should see the HTML source code of the page.
 
