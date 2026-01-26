@@ -57,7 +57,7 @@ for chapter_link, chapter_name in matches:
         (book_title, description, chapter_link, chapter_name))
 
 # 先只打印一次书名和简介
-with open("brihat_samhita_index.txt", "w", encoding="utf-8") as f_index:
+with open("brihat_samhita_index_sa.txt", "w", encoding="utf-8") as f_index:
     # 书名和简介只写一次
     print(f"Title: {book_title}\n", file=f_index)
     print(f"Description: {description}\n", file=f_index)
