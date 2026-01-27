@@ -103,8 +103,14 @@ if __name__ == "__main__":
 
     with open("herodotus_chapter_1.txt", "w", encoding="utf-8") as f:
         for i, section_text in enumerate(sections, start=1):
+            # Write each section to a single text file
             f.write(f"[Section {i}]\n")
             f.write(section_text)
             f.write("\n\n")
+
+            # Also print to console
+            print(f"[Section {i}]")
+            print(section_text)
+            print()
 
     print(f"Saved {len(sections)} sections to herodotus_chapter_1.txt")
