@@ -1,6 +1,6 @@
 from urllib.request import urlopen
 
-url = "https://www.geschkult.fu-berlin.de/e/semiarab/arabistik/seminar/index.html"
+url = "https://www.qalamos.net/receive/MyMssPerson_agent_00001577"
 
 page = urlopen(url)
 
